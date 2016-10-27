@@ -7,7 +7,7 @@ import java.util.Random;
  * Si hay una mina en una posici贸n guarda el n煤mero -1
  * Si no hay una mina, se guarda cu谩ntas minas hay alrededor.
  * Almacena la puntuaci贸n de la partida
- * @author jesusredondogarcia
+ * @author 羖varoTejeda
  *
  */
 public class ControlJuego {
@@ -45,6 +45,30 @@ public class ControlJuego {
 		
 		//Pongo la puntuaci贸n a cero:
 
+		puntuacion = 0;
+		
+		for (int i = 0; i < MINAS_INICIALES; i++) {
+			
+			boolean mina = false;
+			
+			while(!mina){
+				
+				int x = ((int)Math.random()*10);
+				int y = ((int)Math.random()*10);
+				
+				if(tablero[x][y] == MINA){
+					mina = true;
+				} else{
+					tablero[x][y] = MINA;
+				}
+				
+			}
+			
+		}
+		
+		
+		
+		
 		
 	}
 	
@@ -103,6 +127,11 @@ public class ControlJuego {
 	 * @return Un entero que representa el n煤mero de minas alrededor de la celda
 	 */
 	public int getMinasAlrededor(int i, int j) {
+		
+		while(){
+			
+		}
+		
 	}
 
 	/**
@@ -110,6 +139,7 @@ public class ControlJuego {
 	 * @return Un entero con la puntuaci贸n actual
 	 */
 	public int getPuntuacion() {
+		return puntuacion;
 	}
 	
 }
