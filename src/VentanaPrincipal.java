@@ -124,7 +124,7 @@ public class VentanaPrincipal {
 		botonesJuego = new JButton[10][10];
 		for (int i = 0; i < botonesJuego.length; i++) {
 			for (int j = 0; j < botonesJuego[i].length; j++) {
-				botonesJuego[i][j] = new JButton("-");
+				botonesJuego[i][j] = new JButton("");
 				panelesJuego[i][j].add(botonesJuego[i][j]);
 			}
 		}
